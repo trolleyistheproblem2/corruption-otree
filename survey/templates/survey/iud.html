@@ -1,0 +1,49 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Survey Instructions
+{% endblock %}
+
+{% block content %}
+
+<p>
+<font size="+2"><b>Instructions</b></font>
+
+<p>In a moment, we are going to share with you, the profiles of two hypothetical, or made up, politicians. We want you to think carefully about which of these politicians <b>you would prefer to vote for</b>.</p>
+
+<p>It is very important that you <b>understand the politician descriptions</b> and that you <b>remember the details</b>, as there will be follow up questions.</p>
+
+<p>You will find a description of two candidates, Candidate 1 and Candidate 2 below. Please read them very carefully, and refer to the summary sheet if need be. We will ask you some follow-up questions, including which of these two politicians you would vote for.</p>
+
+
+<font size="+2"><b>Descriptions</b></font>
+    <p></p>
+
+<p>Imagine that you were living in a village in another district in Maharashtra. There are many challenges today and you are voting for candidates in a state election, who each say they are the best person to fix the community's problems and to help it grow. <p><b>Your task is to think carefully about which of two candidates to support in the election.</b></p>
+<p><font size="+1"><b>Candidate 1</b></font></p>
+
+<p>The first candidate in the election has not been accused of corruption in their previous position as a member of the gram panchayat. They say that during their time in the gram panchayat they only worked to bring more benefits to the people in their village. The candidate promises to deliver jobs to your village through securing funding from the state government for new roads, wells, and other development projects.</p>
+
+<p><font size="+1"><b>Candidate 2</b></font></p>
+
+<p>The second candidate in the election has not been accused of corruption during their time as a member of the gram panchayat. They say that during their time in the gram panchayat they only worked to bring more benefits to the people in their village. The candidate promises to deliver jobs to your village through securing funding from the state government for new roads, wells, and other development projects. During their time in the gram panchayat, they were said to be average at securing such contracts: that is, they were no better or worse at securing them than other members of the gram panchayat.</p>
+
+<p>In a moment, we will ask you to state which candidate you would vote for.</p>
+
+
+<p><font size="+1"> <b>To summarize</b>,</font>
+
+<p><b>Candidate 1</b> has not been accused of corruption, says they only worked to bring benefits to the people during their time in the gram panchayat, and promises to deliver new jobs through securing funding for new development projects.</p> 
+
+<p><b>Candidate 2</b> has not been accused of corruption, says they only worked to bring benefits to the people during their time in the gram panchayat, and promises to provide new jobs through government-funded development projects. Candidate 2 was said to be average at delivering such work during their time in the gram panchayat.</p>
+</p>
+</p>
+
+<center><img src="{% static "corruption/t3_1.png" %}" style="width: 50%; height: 50%"/></center>
+
+<br />
+
+{% next_button %}
+
+{% endblock %}

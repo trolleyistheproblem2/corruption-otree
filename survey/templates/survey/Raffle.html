@@ -1,0 +1,26 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Participate in the Amazon Gift Card Raffle
+{% endblock %}
+
+{% block content %}
+
+<br />
+
+<b>Thank you so much for participating in this survey.</b>
+
+    <p>If you wish to participate in the raffle for Amazon Gift Cards worth INR 1,000 please enter your name and phone number below.</p>
+    <p>We will be picking 5 respondents randomly to award the Amazon Gift Card to.</p>
+    <p>Your personal details are not linked to your previous responses, and will only be used in case you win the prize.</p>
+    <p>Please click the Next button if you do not wish to participate in the Raffle.</p>
+ 
+
+    <tr><td>{% formfield player.name with label = "Please enter your name below." %}</td></tr>
+    <tr><td>{% formfield player.cell_number with label = "Please enter your 10-digit cell number below." %}</td></tr>
+
+
+  {% next_button %}
+
+{% endblock %}

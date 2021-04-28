@@ -1,0 +1,30 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Questions
+{% endblock %}
+
+{% block content %}
+
+<p><font size="+1"><b>Please answer the following questions.</b></font></p>
+<p>
+<center><img src="{% static image_path %}" style="width: 50%; height: 50%"/></center>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.intelligence_c1 with label = "How <b>intelligent</b> do you think <b>candidate 1</b> is on a 1 to 10 scale, where 1 means not at all intelligent and 10 means extremely intelligent?" %}</td></tr> 
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.intelligence_c2 with label = "How <b>intelligent</b> do you think <b>candidate 2</b> is on a 1 to 10 scale, where 1 means not at all intelligent and 10 means extremely intelligent?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.competence_c1 with label = "How much do you think <b>candidate 1</b> would be <b>able to get things done</b> on a 1 to 10 scale, where 1 means not at all able to get things done and 10 means extremely able to get things done?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.competence_c2 with label = "How much do you think <b>candidate 2</b> would be <b>able to get things done</b> on a 1 to 10 scale, where 1 means not at all able to get things done and 10 means extremely able to get things done?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.contract_c1 with label = "How hard do you think <b>candidate 1</b> will work to <b>bring new contracts</b> to the village?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.contract_c2 with label = "How hard do you think <b>candidate 2</b> will work to <b>bring new contracts</b> to the village?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.vote with label = "<b>From this information, please indicate which candidate you would vote for in the election. Remember, you are to imagine that you were living in a village in another district in Maharashtra. There are many challenges today and you are voting for candidates in a state election who each say they are the best person to fix the community's problems and to help it grow. Your task is to think carefully about which of two candidates to support in the election. <br /> Which of the two candidates would you support?</b>" %}</td></tr></p>
+
+{% next_button %}
+
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Questions
+{% endblock %}
+
+{% block content %}
+
+<p><font size="+1"><b>Please answer the following questions.</b></font></p>
+<p>
+<center><img src="{% static image_path %}" style="width: 50%; height: 50%"/></center>
+<tr><td>{% formfield player.winner with label = "From this information, please indicate <b>which candidate you think would win in the election</b>." %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.trust_c1 with label = "How much would you <b>trust candidate 1</b> to serve your interests as a politician?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.trust_c2 with label = "How much would you <b>trust candidate 2</b> to serve your interests as a politician?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.loyalty_c1 with label = "How much would you trust <b>candidate 1</b> to <b>stay loyal</b> to people in their village?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+<tr><td>{% formfield player.loyalty_c2 with label = "How much would you trust <b>candidate 2</b> to <b>stay loyal</b> to people in their village?" %}</td></tr>
+<tr><td colspan="2"><hr/></td></tr>
+</p>
+
+{% next_button %}
+
+{% endblock %}
